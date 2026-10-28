@@ -212,7 +212,7 @@ html[data-theme=neon] .btn:not(.ghost):not(:disabled){background:linear-gradient
     <div class="chips" id="chips"></div>
     <div class="betrow">
       <button type="button" id="minusBtn" data-i18n-aria="minus" data-i18n-title="minus">−</button>
-      <label><span>£</span><input id="betInput" type="number" inputmode="numeric" min="5" step="1" data-i18n-aria="betAmount"></label>
+      <label><span>⭐</span><input id="betInput" type="number" inputmode="numeric" min="5" step="1" data-i18n-aria="betAmount"></label>
       <button type="button" id="plusBtn" data-i18n-aria="plus" data-i18n-title="plus">+</button>
     </div>
     <div class="betrow tools"><button type="button" id="clearBtn" data-i18n="clearBet"></button><button type="button" id="repeatBtn" data-i18n="repeatBet"></button></div>
@@ -282,38 +282,38 @@ html[data-theme=neon] .btn:not(.ghost):not(:disabled){background:linear-gradient
 /* ===== 1. TRANSLATIONS (all interface text lives here) ===== */
 const I18N = {
 uk:{subtitle:"Блекджек проти дилера",balance:"Баланс",inPlay:"У грі",bet:"Ставка",dealer:"Дилер",you:"Ви",hit:"Ще карту",stand:"Досить",
-hitAria:"Взяти ще одну карту",standAria:"Зупинитися і залишити руку",deal:"Роздати карти",next:"Наступний раунд",minus:"Зменшити ставку на £5",plus:"Збільшити ставку на £5",
+hitAria:"Взяти ще одну карту",standAria:"Зупинитися і залишити руку",deal:"Роздати карти",next:"Наступний раунд",minus:"Зменшити ставку на ⭐5",plus:"Збільшити ставку на ⭐5",
 betAmount:"Сума ставки у фунтах",settings:"Налаштування",language:"Мова",sound:"Звук",on:"Увімкнено",off:"Вимкнено",reset:"Прогрес гри",resetBtn:"Скинути прогрес",
-resetTitle:"Скинути прогрес?",resetText:"Баланс повернеться до £500, а вся статистика та історія будуть очищені. Цю дію не можна скасувати.",cancel:"Скасувати",close:"Закрити",
-resetDone:"Прогрес скинуто. Баланс: £500.",stats:"Статистика та історія",games:"Ігор",wins:"Перемог",losses:"Поразок",pushes:"Нічиїх",naturals:"Блекджеків",
+resetTitle:"Скинути прогрес?",resetText:"Баланс повернеться до ⭐500, а вся статистика та історія будуть очищені. Цю дію не можна скасувати.",cancel:"Скасувати",close:"Закрити",
+resetDone:"Прогрес скинуто. Баланс: ⭐500.",stats:"Статистика та історія",games:"Ігор",wins:"Перемог",losses:"Поразок",pushes:"Нічиїх",naturals:"Блекджеків",
 best:"Рекордний баланс",bigWin:"Найбільший виграш",history:"Останні раунди",noHistory:"Історія порожня. Зіграйте перший раунд!",hBet:"ставка",
 turn_betting:"Зробіть ставку",turn_dealing:"Роздача…",turn_player:"Ваш хід",turn_dealer:"Хід дилера",turn_over:"Раунд завершено",soft:"м’яка",faceDown:"Карта сорочкою догори",
 r_blackjack:"Блекджек!",r_bust:"Перебір!",r_win:"Ви виграли!",r_dealerBust:"Перебір у дилера!",r_lose:"Дилер виграв",r_dealerBlackjack:"Блекджек у дилера",r_push:"Нічия",r_bothBlackjack:"Подвійний блекджек",
 rt_blackjack:"Натуральні 21 — виплата 3:2.",rt_bust:"У вас {p}, це більше 21.",rt_win:"У вас {p} проти {d} у дилера.",rt_dealerBust:"У дилера {d} — більше 21.",
 rt_lose:"У дилера {d} проти ваших {p}.",rt_dealerBlackjack:"У дилера натуральні 21.",rt_push:"Обидва мають {p}. Ставку повернено.",rt_bothBlackjack:"В обох натуральні 21. Ставку повернено.",
 balChange:"Чистий результат",newBalance:"Баланс",clearBet:"Скинути ставку",repeatBet:"Повторити ставку",totalBet:"Загальна ставка",theme:"Тема оформлення",th_emerald:"Royal Emerald",th_neon:"Neon Royale",th_midnight:"Midnight Black",motion:"Зменшити анімації",hotkeys:"Клавіші: H — ще карту, S — досить, D — роздати, N — наступний раунд, C — скинути ставку, R — повторити ставку.",tamperNote:"Локальний файл не може надійно захистити баланс: будь-хто може змінити дані через інструменти браузера. Це лише розважальна гра з віртуальною валютою.",ach:"Досягнення",achUnlocked:"Досягнення відкрито!",streak:"Серія перемог",wagered:"Сума ставок",word_win:"ПЕРЕМОГА",word_blackjack:"БЛЕКДЖЕК",word_push:"НІЧИЯ",word_lose:"ПРОГРАШ",err_repeat:"Ще немає попередньої ставки.",err_repeatMax:"Недостатньо коштів для попередньої ставки.",a_firstWin:"Перша перемога",ad_firstWin:"Виграйте свій перший раунд.",a_natural:"Натуральні 21",ad_natural:"Отримайте Blackjack з перших двох карт.",a_streak:"Гаряча серія",ad_streak:"Виграйте 3 раунди поспіль.",a_r25:"25 раундів",ad_r25:"Зіграйте 25 раундів.",a_r100:"100 раундів",ad_r100:"Зіграйте 100 раундів.",a_five:"П’ять перемог",ad_five:"Здобудьте 5 перемог.",stakeLbl:"Ставка",payoutLbl:"Виплата",scoreLine:"Очки: ви {p} · дилер {d}",err_generic:"Сталася помилка. Ставку повернено, спробуйте ще раз.",fairNote:"Карти перемішуються алгоритмом Fisher–Yates із crypto.getRandomValues(). Гра не підлаштовує карти під баланс чи серії й не проходила незалежної сертифікації.",
-err_betInvalid:"Введіть ціле число фунтів.",err_betMin:"Мінімальна ставка — £5.",err_betMax:"Ставка не може перевищувати ваш баланс.",err_roundActive:"Спершу завершіть поточний раунд.",
-refillLow:"Недостатньо коштів для мінімальної ставки (£5).",refillAvail:"Отримайте безкоштовне поповнення £100 (доступне раз на 24 години).",
-refillWait:"Наступне поповнення буде доступне: {time}.",refillBtn:"Отримати £100",refillOk:"Баланс поповнено на £100!",refillNo:"Поповнення ще недоступне. Спробуйте: {time}.",
-refillNot:"Поповнення доступне, лише коли баланс менший за £5.",
+err_betInvalid:"Введіть ціле число фунтів.",err_betMin:"Мінімальна ставка — ⭐5.",err_betMax:"Ставка не може перевищувати ваш баланс.",err_roundActive:"Спершу завершіть поточний раунд.",
+refillLow:"Недостатньо коштів для мінімальної ставки (⭐5).",refillAvail:"Отримайте безкоштовне поповнення ⭐100 (доступне раз на 24 години).",
+refillWait:"Наступне поповнення буде доступне: {time}.",refillBtn:"Отримати ⭐100",refillOk:"Баланс поповнено на ⭐100!",refillNo:"Поповнення ще недоступне. Спробуйте: {time}.",
+refillNot:"Поповнення доступне, лише коли баланс менший за ⭐5.",
 demoNote:"Це локальна демо-версія з віртуальною валютою без реальної вартості. Дані зберігаються в localStorage, який не захищений від змін користувачем.",
 w_welcome:"ЛАСКАВО ПРОСИМО ДО BLACKJACK",w_tag:"Ваше місце за столом чекає.",w_play:"ГРАТИ",w_settings:"НАЛАШТУВАННЯ",w_continue:"ПРОДОВЖИТИ РАУНД",w_skip:"Пропустити",w_resume:"Знайдено незавершений раунд. Він продовжиться з тими самими картами, ставку не буде списано вдруге.",commentsLbl:"Коментарі дилера",
 ranks:{A:"Туз",J:"Валет",Q:"Дама",K:"Король"},suits:{spades:"піки",hearts:"чирви",diamonds:"бубни",clubs:"трефи"},of:" "},
 en:{subtitle:"Blackjack against the dealer",balance:"Balance",inPlay:"In play",bet:"Bet",dealer:"Dealer",you:"You",hit:"Hit",stand:"Stand",
-hitAria:"Hit: draw another card",standAria:"Stand: keep your hand",deal:"Deal",next:"Next round",minus:"Decrease bet by £5",plus:"Increase bet by £5",
+hitAria:"Hit: draw another card",standAria:"Stand: keep your hand",deal:"Deal",next:"Next round",minus:"Decrease bet by ⭐5",plus:"Increase bet by ⭐5",
 betAmount:"Bet amount in pounds",settings:"Settings",language:"Language",sound:"Sound",on:"On",off:"Off",reset:"Game progress",resetBtn:"Reset progress",
-resetTitle:"Reset progress?",resetText:"Your balance returns to £500 and all statistics and history are cleared. This cannot be undone.",cancel:"Cancel",close:"Close",
-resetDone:"Progress reset. Balance: £500.",stats:"Statistics and history",games:"Games",wins:"Wins",losses:"Losses",pushes:"Pushes",naturals:"Blackjacks",
+resetTitle:"Reset progress?",resetText:"Your balance returns to ⭐500 and all statistics and history are cleared. This cannot be undone.",cancel:"Cancel",close:"Close",
+resetDone:"Progress reset. Balance: ⭐500.",stats:"Statistics and history",games:"Games",wins:"Wins",losses:"Losses",pushes:"Pushes",naturals:"Blackjacks",
 best:"Highest balance",bigWin:"Largest profit",history:"Recent rounds",noHistory:"No history yet. Play your first round!",hBet:"bet",
 turn_betting:"Place your bet",turn_dealing:"Dealing…",turn_player:"Your turn",turn_dealer:"Dealer's turn",turn_over:"Round over",soft:"soft",faceDown:"Face-down card",
 r_blackjack:"Blackjack!",r_bust:"Bust!",r_win:"You win!",r_dealerBust:"Dealer busts!",r_lose:"Dealer wins",r_dealerBlackjack:"Dealer Blackjack",r_push:"Push",r_bothBlackjack:"Double Blackjack",
 rt_blackjack:"A natural 21 pays 3:2.",rt_bust:"You have {p}, which is over 21.",rt_win:"You have {p} against the dealer's {d}.",rt_dealerBust:"Dealer has {d}, which is over 21.",
 rt_lose:"Dealer has {d} against your {p}.",rt_dealerBlackjack:"The dealer has a natural 21.",rt_push:"You both have {p}. Your bet is returned.",rt_bothBlackjack:"You both have a natural 21. Your bet is returned.",
 balChange:"Net result",newBalance:"Balance",clearBet:"Clear bet",repeatBet:"Repeat bet",totalBet:"Total bet",theme:"Theme",th_emerald:"Royal Emerald",th_neon:"Neon Royale",th_midnight:"Midnight Black",motion:"Reduce motion",hotkeys:"Keys: H hit, S stand, D deal, N next round, C clear bet, R repeat bet.",tamperNote:"A local file cannot reliably protect your balance: anyone can edit the data with browser tools. This is only a fun game with virtual currency.",ach:"Achievements",achUnlocked:"Achievement unlocked!",streak:"Win streak",wagered:"Total wagered",word_win:"WIN",word_blackjack:"BLACKJACK",word_push:"PUSH",word_lose:"LOSE",err_repeat:"There is no previous bet yet.",err_repeatMax:"Not enough balance for your previous bet.",a_firstWin:"First Win",ad_firstWin:"Win your first round.",a_natural:"Natural 21",ad_natural:"Get Blackjack from your first two cards.",a_streak:"Hot Streak",ad_streak:"Win 3 rounds in a row.",a_r25:"25 Rounds",ad_r25:"Play 25 rounds.",a_r100:"100 Rounds",ad_r100:"Play 100 rounds.",a_five:"Five Wins",ad_five:"Earn 5 wins.",stakeLbl:"Bet",payoutLbl:"Payout",scoreLine:"Totals: you {p} · dealer {d}",err_generic:"Something went wrong. Your bet was returned, please try again.",fairNote:"Cards are shuffled with Fisher–Yates using crypto.getRandomValues(). The game never adjusts cards to your balance or streaks, and it has not been independently certified.",
-err_betInvalid:"Enter a whole number of pounds.",err_betMin:"The minimum bet is £5.",err_betMax:"Your bet cannot exceed your balance.",err_roundActive:"Finish the current round first.",
-refillLow:"You don't have enough for the minimum bet (£5).",refillAvail:"Claim a free £100 refill (available once every 24 hours).",
-refillWait:"Next refill available: {time}.",refillBtn:"Claim £100",refillOk:"Balance refilled by £100!",refillNo:"Refill not available yet. Try again: {time}.",
-refillNot:"A refill is only available when your balance is below £5.",
+err_betInvalid:"Enter a whole number of pounds.",err_betMin:"The minimum bet is ⭐5.",err_betMax:"Your bet cannot exceed your balance.",err_roundActive:"Finish the current round first.",
+refillLow:"You don't have enough for the minimum bet (⭐5).",refillAvail:"Claim a free ⭐100 refill (available once every 24 hours).",
+refillWait:"Next refill available: {time}.",refillBtn:"Claim ⭐100",refillOk:"Balance refilled by ⭐100!",refillNo:"Refill not available yet. Try again: {time}.",
+refillNot:"A refill is only available when your balance is below ⭐5.",
 demoNote:"This is a local, client-side demo with virtual currency that has no real value. Data is kept in localStorage, which is not secure against user modification.",
 w_welcome:"WELCOME TO BLACKJACK",w_tag:"Your seat at the table awaits.",w_play:"PLAY",w_settings:"SETTINGS",w_continue:"CONTINUE ROUND",w_skip:"Skip",w_resume:"An unfinished round was found. It will continue with the same cards, and your bet will not be charged again.",commentsLbl:"Dealer comments",
 ranks:{A:"Ace",J:"Jack",Q:"Queen",K:"King"},suits:{spades:"spades",hearts:"hearts",diamonds:"diamonds",clubs:"clubs"},of:" of "}
@@ -347,7 +347,7 @@ let S=load();
 /* ===== 3. HELPERS ===== */
 const $=id=>document.getElementById(id);
 function t(k,p){const v=(I18N[S.lang]&&I18N[S.lang][k])||I18N.en[k]||"";return typeof v==="string"&&p?v.replace(/\{(\w+)\}/g,(m,n)=>p[n]!==undefined?p[n]:""):v}
-function money(p,signed){const a=Math.abs(p),w=a%100===0?String(a/100):(a/100).toFixed(2);return (signed?(p>0?"+":p<0?"−":""):"")+"£"+w}
+function money(p,signed){const a=Math.abs(p),w=a%100===0?String(a/100):(a/100).toFixed(2);return (signed?(p>0?"+":p<0?"−":""):"")+"⭐"+w}
 const sleep=ms=>new Promise(r=>setTimeout(r,ms));
 function randInt(n){if(window.crypto&&crypto.getRandomValues){const a=new Uint32Array(1),lim=Math.floor(4294967296/n)*n;do{crypto.getRandomValues(a)}while(a[0]>=lim);return a[0]%n}return Math.floor(Math.random()*n)}
 function createDeck(){const d=[];for(const s of SUITS)for(const r of RANKS)d.push({rank:r,suit:s});return d}
@@ -456,7 +456,7 @@ function renderControls(){
   $("hitBtn").disabled=!act;$("standBtn").disabled=!act;
   const canBet=betting&&S.balance>=MIN_BET;
   $("betInput").disabled=!canBet;$("clearBtn").disabled=!canBet;$("repeatBtn").disabled=!canBet;$("minusBtn").disabled=!canBet;$("plusBtn").disabled=!canBet;$("dealBtn").disabled=!canBet;
-  $("chips").querySelectorAll("button").forEach(b=>{b.disabled=!canBet;b.setAttribute("aria-label",t("bet")+" £"+b.dataset.v)});
+  $("chips").querySelectorAll("button").forEach(b=>{b.disabled=!canBet;b.setAttribute("aria-label",t("bet")+" ⭐"+b.dataset.v)});
   $("dealerArea").classList.toggle("active",G.phase==="dealer");$("playerArea").classList.toggle("active",G.phase==="player");
   $("turn").textContent=t("turn_"+G.phase);
   $("motionBtn").textContent=t(S.reduce?"on":"off");$("motionBtn").setAttribute("aria-pressed",String(S.reduce));document.querySelectorAll("[data-theme-btn]").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.themeBtn===S.theme)));
@@ -652,7 +652,7 @@ function closeDlg(d){try{d.close()}catch(e){d.removeAttribute("open")}}
 function setLang(l){if(l!=="uk"&&l!=="en")return;S.lang=l;save();render();if(lastEv&&$("bubble").classList.contains("show"))say(lastEv)}
 
 /* ===== 11. EVENTS & START ===== */
-CHIPS.forEach(v=>{const b=document.createElement("button");b.type="button";b.className="chip";b.dataset.v=v;b.textContent="£"+v;
+CHIPS.forEach(v=>{const b=document.createElement("button");b.type="button";b.className="chip";b.dataset.v=v;b.textContent="⭐"+v;
   b.style.setProperty("--c",{5:"#b3261e",10:"#1f5fb5",25:"#1f8a4c",50:"#6a3fa0",100:"#1c1c1c"}[v]);
   b.addEventListener("click",()=>addChip(v));$("chips").appendChild(b)});
 $("minusBtn").addEventListener("click",()=>{const c=readBetInput();const base=Number.isInteger(c)?c:S.bet;
